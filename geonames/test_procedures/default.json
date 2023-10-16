@@ -87,10 +87,10 @@
         },
         {
           "operation": "default",
-          "warmup-iterations": 500,
+          "warmup-iterations": 5000,
           "iterations": 10000
           {%- if not target_throughput %}
-          ,"target-throughput": 50
+          ,"target-throughput": 60
           {%- elif target_throughput is string and target_throughput.lower() == 'none' %}
           {%- else %}
           ,"target-throughput": {{ target_throughput | tojson }}
